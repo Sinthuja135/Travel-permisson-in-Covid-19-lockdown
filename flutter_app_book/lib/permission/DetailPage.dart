@@ -31,6 +31,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     var timestamp;
+
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.post.data["NIC"]),
@@ -47,51 +48,53 @@ class _DetailPageState extends State<DetailPage> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("Name")),
+                      Chip(
+                      label: Text("Name"),backgroundColor: Colors.white, ),
                       Text(widget.post.data["Name"],
-                          style: TextStyle(fontSize: 20)),
+                          style: TextStyle(fontSize: 20, backgroundColor: Colors.grey[200])),
+                     
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("GS Division")),
+                      Chip(label: Text("GS Division"),backgroundColor: Colors.white,  ),
                       Text(widget.post.data["GS_division"].toString(),
-                          style: TextStyle(fontSize: 20)),
+                          style: TextStyle(fontSize: 30, backgroundColor: Colors.grey[200])),
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("Reason")),
+                      Chip(label: Text("Reason"),backgroundColor: Colors.white, ),
                       Text(widget.post.data["Reason"],
-                          maxLines: 2, style: TextStyle(fontSize: 20)),
+                          maxLines: 2, style: TextStyle(fontSize: 20, backgroundColor: Colors.grey[200])),
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("Date")),
-                      Text(widget.post.data["Travel_date"].toString(),
-                          style: TextStyle(fontSize: 15)),
+                      Chip(label: Text("Date"),backgroundColor: Colors.white, ),
+                      Text(widget.post.data["Travel_date"].toDate().toString(),
+                          style: TextStyle(fontSize: 15, backgroundColor: Colors.grey[200])),
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("Report")),
+                      Chip(label: Text("Report"),backgroundColor: Colors.white, ),
                       Text(widget.post.data["PCR_report"],
-                          maxLines: 5, style: TextStyle(fontSize: 25)),
+                          maxLines: 5, style: TextStyle(fontSize: 25, backgroundColor: Colors.grey[200])),
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("From")),
+                      Chip(label: Text("From"),backgroundColor: Colors.white, ),
                       Text(widget.post.data["Travelling_from"],
-                          style: TextStyle(fontSize: 20)),
+                          style: TextStyle(fontSize: 20, backgroundColor: Colors.grey[200])),
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Chip(label: Text("To")),
+                      Chip(label: Text("To"),backgroundColor: Colors.white, ),
                       Text(widget.post.data["Travelling_to"],
-                          style: TextStyle(fontSize: 20)),
+                          style: TextStyle(fontSize: 20, backgroundColor: Colors.grey[200]),),
                     ]),
 
                 //  Text(widget.post.data["Status"],
